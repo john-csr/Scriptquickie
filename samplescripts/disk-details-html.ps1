@@ -1,7 +1,7 @@
 <#PSScriptInfo
 .VERSION 1.0
 .DATE 8-9-2025
-.AUTHOR John Core
+.AUTHOR John C.
 .DESCRIPTION Scriptquickie tool for launching and editing PowerShell scripts
 #># Define output path
 $reportPath = "$env:USERPROFILE\Desktop\DiskReport.html"
