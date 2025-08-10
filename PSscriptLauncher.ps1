@@ -1,6 +1,6 @@
 <#PSScriptInfo
 .VERSION 1.0
-.AUTHOR John Core
+.AUTHOR John C.
 .DESCRIPTION Powershell launch tool for file select and run
 #>
 
@@ -62,3 +62,4 @@ $form.Controls.Add($runButton)
 # Show the form
 $form.Topmost = $true
 $form.ShowDialog()
+
