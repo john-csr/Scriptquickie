@@ -3,13 +3,14 @@
 <head>
   <title>Script Loader + Folder File Lister</title>
   <HTA:APPLICATION
-    APPLICATIONNAME="ScriptFolderTool"
+    APPLICATIONNAME="ScriptLauncherTool"
     BORDER="thin"
     SCROLL="no"
     SINGLEINSTANCE="yes"
     WINDOWSTATE="maximize"
   />
   <meta name="author" content="John C.">
+  <meta name="date" content="8-9-2025">
   <meta name="program" content="Scriptquickie">
   <meta name="purpose" content="Easy script launching, testing, and editing environment">
   <meta name="description" content="Scriptquickie is a lightweight HTA-based tool for loading, editing, and executing PowerShell scripts with ease.">
@@ -197,9 +198,12 @@
     }
 
     function launchFixedScript() {
-      var filePath = "C:\\Scripts\\PSscriptLauncher.ps1";
       try {
         var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var htaPath = window.location.pathname;
+        var htaFolder = fso.GetParentFolderName(htaPath);
+        var filePath = htaFolder + "\\PSscriptLauncher.ps1";
+
         if (fso.FileExists(filePath)) {
           var shell = new ActiveXObject("Shell.Application");
           var command = "-ExecutionPolicy Bypass -File \"" + filePath + "\"";
@@ -216,11 +220,10 @@
 
 <body>
   <div class="header">
-  <h1>Scriptquickie</h1>
-  <p>Easy script launching, testing, and editing environment</p>
-  <small>Created by John C.<br>Version 1.0 - August 9, 2025</small>
-</div>
-
+    <h1>Scriptquickie</h1>
+    <p>Easy script launching, testing, and editing environment</p>
+    <small>Created by John C.<br>Version 1.0 - August 9, 2025</small>
+  </div>
 
   <table>
     <tr>
@@ -253,5 +256,11 @@
   </table>
 </body>
 </html>
+
+    
+        
+      
+    
+    
 
 
