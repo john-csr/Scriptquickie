@@ -80,6 +80,6 @@ Scriptquickie/
 - Date: August 9, 2025  
 - Purpose: Rapid script testing and deployment in classroom and enterprise AV/IT environments  
 
----
 
-Watch the demo on [YouTube](https://youtu.be/CsOimc8axL0)
+
+
